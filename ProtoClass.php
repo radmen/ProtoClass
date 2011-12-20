@@ -2,13 +2,13 @@
 class ProtoClass {
 
   /**
-   * @param array $pClassProperties if set all values will be stored as a object properties
+   * @param array $classProperties if set all values will be stored as a object properties
    */
-  public function __construct(array $pClassProperties = null) {
+  public function __construct(array $classProperties = null) {
     
-    if(null !== $pClassProperties) {
+    if(null !== $classProperties) {
       
-      foreach($pClassProperties as $name => $value) {
+      foreach($classProperties as $name => $value) {
         $this->$name = $value;
       }
     }
