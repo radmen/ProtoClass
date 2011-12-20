@@ -10,6 +10,7 @@ It's not the same as proper methods so there's no `$this` to use. Instead the fi
 
 ## Examples
 ```php
+<?php
 include 'ProtoClass.php';
 
 $joe = new ProtoClass();
@@ -24,9 +25,10 @@ $joe->hello();
 $number = new ProtoClass(array(
   'precision' => 4,
   'round' => function(ProtoClass $self, $number) {
-	return round($number, $self->precision);
+    return round($number, $self->precision);
   }
 ));
 
 var_dump($number->round(1.23456));
+?>
 ```
